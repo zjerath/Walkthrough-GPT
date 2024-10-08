@@ -80,6 +80,7 @@
   margin-left: auto;
   text-align: left;
   overflow-x: scroll;
+  white-space: pre-wrap;
 }
 
 .botMessage {

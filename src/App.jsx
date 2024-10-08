@@ -29,6 +29,8 @@ const Walkthrough = () => {
     setCode(e.target.value);
   };
 
+  const sanitizeUserInput = (input) => input.replace(/>/g, '\\>');
+
   return (
     <div>
       <div className='walkthrucenter'>
@@ -46,7 +48,7 @@ const Walkthrough = () => {
                       <img src={logo} alt="CodeCoach Logo" className="logoimg" />
                     )}
                     <ReactMarkdown className={msg.role === 'user' ? 'walkthruuser' : 'botMessage'}>
-                      {msg.content}
+                      {msg.role === 'user' ? sanitizeUserInput(msg.content) : msg.content}
                     </ReactMarkdown>
                   </div>
                 ))}
