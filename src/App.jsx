@@ -35,7 +35,7 @@ const Walkthrough = () => {
     <div>
       <div className='walkthrucenter'>
         <h1 className='h1'>Walkthrough Helper</h1>
-        <p className='p'>The walkthrough component is meant to help you analyze your code without directly debugging for you. By repeating your logic back to you step by step, the system attempts to help you catch and fix mistakes in your code snippet.</p>
+        <p className='p'>Walkthrough Helper is meant to help you understand your code by describing what it does step by step. This to help you find and fix mistakes in your code yourself. Paste the key parts of your code, e.g., a function or method definition. You can also add an example call to that function with output to guide the walkthrough.</p>
         <div className='walkthrudiv'>
           <div className='inputwrapper'>
             {showInput ? (
