@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const sendWalkthroughRequest = async (code) => {
   try {
-    const response = await axios.post('/api/walkthrough', { code });
+    const response = await axios.post('https://walkthrough-gpt.vercel.app/api/walkthrough', { code });
 
     return response.data.content;
   } catch (error) {
