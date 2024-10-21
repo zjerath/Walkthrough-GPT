@@ -21,7 +21,7 @@ export default async function handler(req, res) {
         {
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+            Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
           },
         }
       );
