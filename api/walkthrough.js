@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic'; // Ensures dynamic rendering
 
-export async function POST(request) {
+export async function GET(request) {
   const { code } = await request.json();
 
   try {
