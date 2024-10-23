@@ -1,8 +1,15 @@
 import axios from 'axios';
 
-export const dynamic = 'force-dynamic'; // Ensures dynamic rendering
-
 export async function POST(request) {
+  return new Response(JSON.stringify({ message: "Random text from walkthrough API" }), {
+    headers: { 'Content-Type': 'application/json' },
+    status: 200,
+  });
+}
+
+// export const dynamic = 'force-dynamic'; // Ensures dynamic rendering
+
+/*export async function POST(request) {
   const { code } = await request.json();
 
   try {
@@ -37,4 +44,4 @@ export async function POST(request) {
       status: 500,
     });
   }
-}
+}*/
