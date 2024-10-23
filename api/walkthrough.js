@@ -1,10 +1,12 @@
+import axios from 'axios';
+
 export const dynamic = 'force-dynamic'; // Ensures dynamic rendering
 
-export async function GET(request) {
+export async function POST(request) {
   const { code } = await request.json();
 
   try {
-    /*const response = await axios.post(
+    const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
         model: 'gpt-3.5-turbo',
@@ -23,12 +25,11 @@ export async function GET(request) {
           Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
         },
       }
-    );*/
-    return new Response(JSON.stringify(code))
-    /*return new Response(JSON.stringify({ content: response.data.choices[0].message.content }), {
+    );
+    return new Response(JSON.stringify({ content: response.data.choices[0].message.content }), {
       headers: { 'Content-Type': 'application/json' },
       status: 200,
-    });*/
+    });
   } catch (error) {
     console.error('Error:', error);
     return new Response(JSON.stringify({ error: 'Failed to process the request' }), {
