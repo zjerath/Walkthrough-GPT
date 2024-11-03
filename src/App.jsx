@@ -8,6 +8,7 @@ const Walkthrough = () => {
   const [code, setCode] = useState('');
   const [conversation, setConversation] = useState([]);
   const [showInput, setShowInput] = useState(true);
+  const [showPrivacyPopup, setShowPrivacyPopup] = useState(false); // State for popup
 
   const removeComments = (input) => {
     // Remove single-line comments
@@ -45,6 +46,19 @@ const Walkthrough = () => {
       <div className='walkthrucenter'>
         <h1 className='h1'>Walkthrough Helper</h1>
         <p className='p'>Walkthrough Helper is meant to help you understand your code by describing what it does step by step. This to help you find and fix mistakes in your code yourself. Paste the key parts of your code, e.g., a function or method definition. You can also add an example call to that function with output to guide the walkthrough.</p>
+
+        <button className="privacyButton" onClick={() => setShowPrivacyPopup(true)}>What We Do with Your Data</button>
+
+        {showPrivacyPopup && (
+          <div className="privacyPopup">
+            <div className="privacyContent">
+              <h2>What We Do with Your Data</h2>
+              <p>We keep your inputs and responses for data purposes to improve the walkthrough helper and refine our service. For more details on data usage, you can refer to the <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener noreferrer">OpenAI API Data Privacy Policy</a>.</p>
+              <button onClick={() => setShowPrivacyPopup(false)} className="closeButton">Close</button>
+            </div>
+          </div>
+        )}
+
         <div className='walkthrudiv'>
           <div className='inputwrapper'>
             {showInput ? (

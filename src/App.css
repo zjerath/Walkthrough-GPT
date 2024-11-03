@@ -101,3 +101,60 @@
   border: 1px solid gray;
   border-radius: 20px;
 }
+
+.privacyButton {
+  background-color: #f0f0f0;
+  border: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.privacyButton:hover {
+  background-color: #d3d3d3;
+}
+
+.privacyPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacyContent {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.privacyContent h2 {
+  margin-top: 0;
+}
+
+.privacyContent p {
+  margin: 1rem 0;
+}
+
+.closeButton {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.closeButton:hover {
+  background-color: #c9302c;
+}
