@@ -111,6 +111,7 @@
   cursor: pointer;
   border-radius: 5px;
   margin-top: 1rem;
+  max-width: 10rem;
 }
 
 .privacyButton:hover {
