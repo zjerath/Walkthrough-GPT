@@ -9,9 +9,18 @@ const Walkthrough = () => {
   const [conversation, setConversation] = useState([]);
   const [showInput, setShowInput] = useState(true);
 
+  const removeComments = (input) => {
+    // Remove single-line comments
+    input = input.replace(/#.*$/gm, '');
+    // Remove multi-line comments
+    input = input.replace(/('''[\s\S]*?'''|"""[\s\S]*?""")/gm, '');
+    return input.trim();
+  };
+
   const handleWalkthrough = async () => {
     try {
-      const result = await sendWalkthroughRequest(code);
+      const sanitizedCode = removeComments(code);
+      const result = await sendWalkthroughRequest(sanitizedCode);
       setConversation([{ role: 'user', content: code }, { role: 'system', content: result }]);
       setShowInput(false); // Switch to result view
     } catch (error) {
