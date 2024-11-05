@@ -14,7 +14,7 @@ export async function POST(request) {
           {
             role: 'system',
             content:
-              'For any code given, remove all comments and walk through the code without offering hints, but still while being helpful.',
+              'For any code given, remove all comments and walk through the code line by line. Be helpful, but do not correct any code directly.',
           },
           { role: 'user', content: code },
         ],
