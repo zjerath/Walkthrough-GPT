@@ -53,7 +53,7 @@ const Walkthrough = () => {
           <div className="privacyPopup">
             <div className="privacyContent">
               <h2>What We Do with Your Data</h2>
-              <p>We keep your inputs and responses for data purposes to improve the walkthrough helper and refine our service. For more details on data usage, you can refer to the <a href="https://openai.com/policies/api-data-usage-policies" target="_blank" rel="noopener noreferrer">OpenAI API Data Privacy Policy</a>.</p>
+              <p>We keep your inputs and responses for data purposes to improve the walkthrough helper and refine our service. For more details on data usage, you can refer to the <a href="https://openai.com/consumer-privacy/" target="_blank" rel="noopener noreferrer">OpenAI API Data Privacy Policy</a>.</p>
               <button onClick={() => setShowPrivacyPopup(false)} className="closeButton">Close</button>
             </div>
           </div>
