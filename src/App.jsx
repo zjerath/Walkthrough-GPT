@@ -3,6 +3,8 @@ import { sendWalkthroughRequest } from '../utils/api';
 import './App.css';
 import ReactMarkdown from 'react-markdown';
 import logo from './logo.png';
+import { database } from './firebase';
+import { ref, push } from 'firebase/database';
 
 const Walkthrough = () => {
   const [code, setCode] = useState('');
@@ -24,6 +26,12 @@ const Walkthrough = () => {
       const result = await sendWalkthroughRequest(sanitizedCode);
       setConversation([{ role: 'user', content: code }, { role: 'system', content: result }]);
       setShowInput(false); // Switch to result view
+      // Write the conversation to the Realtime Database
+      const conversationRef = ref(database, 'conversations');
+      await push(conversationRef, {
+        timestamp: new Date().toISOString(),
+        conversation: newConversation
+      });
     } catch (error) {
       console.error('Error in walkthrough:', error);
     }
