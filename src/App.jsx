@@ -30,7 +30,7 @@ const Walkthrough = () => {
       const conversationRef = ref(database, 'conversations');
       await push(conversationRef, {
         timestamp: new Date().toISOString(),
-        conversation: newConversation
+        conversation: conversation
       });
     } catch (error) {
       console.error('Error in walkthrough:', error);

@@ -6,6 +6,7 @@ import { getDatabase } from "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyCkkTK1Xz5l_z3sjqZMY-eFx_Ao98-Eg2I",
   authDomain: "walkthroughgpt.firebaseapp.com",
+  databaseURL: "https://walkthroughgpt-default-rtdb.firebaseio.com",
   projectId: "walkthroughgpt",
   storageBucket: "walkthroughgpt.firebasestorage.app",
   messagingSenderId: "347588345488",
