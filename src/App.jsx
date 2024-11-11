@@ -24,13 +24,17 @@ const Walkthrough = () => {
     try {
       const sanitizedCode = removeComments(code);
       const result = await sendWalkthroughRequest(sanitizedCode);
-      setConversation([{ role: 'user', content: code }, { role: 'system', content: result }]);
+      const newConversation = [
+        { role: 'user', content: code },
+        { role: 'system', content: result }
+      ];
+      setConversation(newConversation);
       setShowInput(false); // Switch to result view
       // Write the conversation to the Realtime Database
       const conversationRef = ref(database, 'conversations');
       await push(conversationRef, {
         timestamp: new Date().toISOString(),
-        conversation: conversation
+        conversation: newConversation
       });
     } catch (error) {
       console.error('Error in walkthrough:', error);
