@@ -1,17 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { sendWalkthroughRequest } from '../utils/api';
 import './App.css';
 import ReactMarkdown from 'react-markdown';
 import logo from './logo.png';
 import { database } from './firebase';
 import { ref, push } from 'firebase/database';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const Walkthrough = () => {
   const [code, setCode] = useState('');
   const [conversation, setConversation] = useState([]);
   const [showInput, setShowInput] = useState(true);
   const [showPrivacyPopup, setShowPrivacyPopup] = useState(false); // State for popup
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
+    });
+  }, []);
+  
   const removeComments = (input) => {
     // Remove single-line comments
     input = input.replace(/#.*$/gm, '');
@@ -21,6 +34,10 @@ const Walkthrough = () => {
   };
 
   const handleWalkthrough = async () => {
+    if (!isAuthenticated) {
+      alert("Please sign in to use this feature.");
+      return;
+    }
     try {
       const sanitizedCode = removeComments(code);
       const result = await sendWalkthroughRequest(sanitizedCode);
