@@ -14,7 +14,7 @@ export async function POST(request) {
           {
             role: 'system',
             content:
-              'For any code given, remove all comments and walk through the code line by line. Be helpful, but do not correct any code directly.',
+              'You are a Python expert. For any code given, remove all comments and walk through the code line by line. Do not correct any code directly.',
           },
           { role: 'user', content: code },
         ],
