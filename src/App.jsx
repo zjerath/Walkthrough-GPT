@@ -39,6 +39,7 @@ const Walkthrough = () => {
       return;
     }
     try {
+      const systemPrompt = 'You are a Python expert. For any code given, remove all comments and walk through the code line by line. Do not correct any code directly.';
       const sanitizedCode = removeComments(code);
       const result = await sendWalkthroughRequest(sanitizedCode);
       const newConversation = [
@@ -51,7 +52,8 @@ const Walkthrough = () => {
       const conversationRef = ref(database, 'conversations');
       await push(conversationRef, {
         timestamp: new Date().toISOString(),
-        conversation: JSON.stringify(newConversation)
+        conversation: JSON.stringify(newConversation),
+        prompt: systemPrompt
       });
     } catch (error) {
       console.error('Error in walkthrough:', error);
