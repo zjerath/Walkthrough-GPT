@@ -48,17 +48,27 @@ const Walkthrough = () => {
       ];
       setConversation(newConversation);
       setShowInput(false); // Switch to result view
-    // Push the prompt to the 'prompts' tab and get the generated ID
-    const promptsRef = ref(database, 'prompts');
-    const promptRef = await push(promptsRef, { prompt: systemPrompt });
-    const promptId = promptRef.key;
-    // Push the conversation data to the 'conversations' tab with the prompt ID
-    const conversationRef = ref(database, 'conversations');
-    await push(conversationRef, {
-      timestamp: new Date().toISOString(),
-      conversation: JSON.stringify(newConversation),
-      promptId: promptId // Use the generated ID from 'prompts'
-    });
+      // Check if the prompt already exists in the 'prompts' tab
+      const promptsRef = ref(database, 'prompts');
+      const promptQuery = query(promptsRef, orderByChild('prompt'), equalTo(systemPrompt));
+      const promptSnapshot = await get(promptQuery);
+      let promptId;
+      if (promptSnapshot.exists()) {
+        // Reuse the existing prompt ID
+        const existingPromptKey = Object.keys(promptSnapshot.val())[0];
+        promptId = existingPromptKey;
+      } else {
+        // Push the new prompt and get its ID
+        const promptRef = await push(promptsRef, { prompt: systemPrompt });
+        promptId = promptRef.key;
+      }
+      // Push the conversation data to the 'conversations' tab with the prompt ID
+      const conversationRef = ref(database, 'conversations');
+      await push(conversationRef, {
+        timestamp: new Date().toISOString(),
+        conversation: JSON.stringify(newConversation),
+        promptId: promptId // Use the retrieved or newly created ID
+      });
     } catch (error) {
       console.error('Error in walkthrough:', error);
     }
