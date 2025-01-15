@@ -4,7 +4,7 @@ import './App.css';
 import ReactMarkdown from 'react-markdown';
 import logo from './logo.png';
 import { database } from './firebase';
-import { ref, push } from 'firebase/database';
+import { ref, push, query, orderByChild, equalTo, get } from 'firebase/database';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 
 const Walkthrough = () => {
