@@ -54,6 +54,12 @@
 
 .h1 {
   margin-bottom: .5rem;
+  width: fit-content; 
+  background: linear-gradient(to right, #F659B4, 
+          #AA49EE, #74ABBF, #77F6B3); 
+  -webkit-text-fill-color: transparent; 
+  -webkit-background-clip: text; 
+  background-clip: text;
 }
 
 .p {
