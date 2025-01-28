@@ -54,6 +54,8 @@
 
 .h1 {
   margin-bottom: .5rem;
+  justify-content: center;
+  text-align: center;
   width: fit-content; 
   background: linear-gradient(to right, #F659B4, 
           #AA49EE, #74ABBF, #77F6B3); 
