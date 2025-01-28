@@ -89,8 +89,8 @@ const Walkthrough = () => {
   return (
     <div>
       <div className='walkthrucenter'>
-        <h1 className='h1'>Walkthrough Helper</h1>
-        <p className='p'>Walkthrough Helper is meant to help you understand your code by describing what it does step by step. This to help you find and fix mistakes in your code yourself. Paste the key parts of your code, e.g., a function or method definition. You can also add an example call to that function with output to guide the walkthrough.</p>
+        <h1 className='h1'>CoPa</h1>
+        <p className='p'>CoPa (Code Paraphraser) is meant to help you understand your code by describing what it does step by step. This to help you find and fix mistakes in your code yourself. Paste the key parts of your code, e.g., a function or method definition. You can also add an example call to that function with output to guide the walkthrough.</p>
 
         <button className="privacyButton" onClick={() => setShowPrivacyPopup(true)}>What We Do with Your Data</button>
 
