@@ -1,7 +1,9 @@
-# React Vitest Template
+# COPA
 
-A starter template for building React apps with Vite. Includes Vitest for unit testing and
-a hefty .gitignore file.
+Instructions for running the react app are below, however to deploy there are a few extra steps needed:
+1. Need to configure an OpenAI API key, any other LLM will require refactoring.
+2. The current app is hosted through vercel, but to deploy through any other service the environment vars will need to be changed.
+3. For any questions, please contact zainjerath@gmail.com or c-riesbeck@northwestern.edu
 
 # Requirements
 
