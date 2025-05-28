@@ -3,7 +3,8 @@
 Instructions for running the react app are below, however to deploy there are a few extra steps needed:
 1. Need to configure an OpenAI API key, any other LLM will require refactoring.
 2. The current app is hosted through vercel, but to deploy through any other service the environment vars will need to be changed.
-3. For any questions, please contact zainjerath@gmail.com or c-riesbeck@northwestern.edu
+3. A new firebase project with realtime database and config file will need to be created and linked as well.
+4. For any questions, please contact zainjerath@gmail.com or c-riesbeck@northwestern.edu
 
 # Requirements
 
