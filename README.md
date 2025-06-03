@@ -3,22 +3,22 @@
 
 ## Requirements
 
-(Node)[https://nodejs.org/en] 20 or greater.
+[Node](https://nodejs.org/en) 20 or greater.
 
 ## Getting Started
 
 Instructions for deployment are below:
-1. Need to configure an (OpenAI API)[https://openai.com/api/] key, any other LLM will require refactoring.
+1. Need to configure an [OpenAI API](https://openai.com/api/) key, any other LLM will require refactoring.
     - Prompt and GPT integration can be found in api/walkthrough.js.
-2. The current app is hosted through (Vercel)[https://vercel.com/], but to deploy through any other service the environment vars will need to be changed.
+2. The current app is hosted through [Vercel](https://vercel.com/), but to deploy through any other service the environment vars will need to be changed.
     - A .env file will need to be created to connect the OpenAI API key to environment variables within the deployment service/technology.
-    - Instructions on integrating environment variables in Vercel can be found (here)[https://vercel.com/docs/environment-variables].
-3. A new (Firebase)[https://firebase.google.com/] project will need to be created as well. Another DB service can be integrated but will require refactoring.
+    - Instructions on integrating environment variables in Vercel can be found [here](https://vercel.com/docs/environment-variables).
+3. A new [Firebase](https://firebase.google.com/) project will need to be created as well. Another DB service can be integrated but will require refactoring.
     - To integrate the database, first create a new Firebase project and paste the corresponding config into src/firebase.js.
     - Once the project is created, navigate to the Realtime Database tab under the Build section and follow the instructions:
     - <img width="235" alt="Screen Shot 2025-06-02 at 10 36 41 PM" src="https://github.com/user-attachments/assets/795f19bd-363e-48f6-8194-c29f8fb336ef" />
 4. Once Integrated, chats and responses will be viewable in the Realtime Database tab. Corresponding code is available in src/App.jsx
-    - The same Firebase project and database can be linked with COPA's corresponding (conversation viewer)[https://github.com/zjerath/Convoviewer] if implemented       as well
+    - The same Firebase project and database can be linked with COPA's corresponding [conversation viewer](https://github.com/zjerath/Convoviewer]) if implemented as well
 
 To run the app locally, the same api key integration must be done. Then run:
 
