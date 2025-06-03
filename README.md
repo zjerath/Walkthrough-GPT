@@ -50,7 +50,7 @@ npm install
 6. Then:
 
 ```
-npm run start
+npm run dev
 ```
 
 Further scripts are provided below.
