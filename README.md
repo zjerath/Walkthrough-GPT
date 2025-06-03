@@ -35,7 +35,7 @@ git clone https://github.com/zjerath/Walkthrough-GPT.git
 
 3. Follow steps 1 and 3 from the deployment instructions above if not already completed.
 
-4. Move into the cloned repo:
+4. Navigate into the cloned repo:
 
 ```
 cd Walkthrough-GPT
