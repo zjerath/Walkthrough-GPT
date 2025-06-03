@@ -30,7 +30,13 @@ npm install
 npm run start
 ```
 
-Further instructions are below. For any questions, please contact zainjerath@gmail.com or c-riesbeck@northwestern.edu.
+Further instructions are below under React App Usage. 
+
+## Contact
+
+For any questions, please contact:
+Zain Jerath - zainjerath@gmail.com
+Chris Riesbeck - c-riesbeck@northwestern.edu.
 
 ## React App Usage
 
