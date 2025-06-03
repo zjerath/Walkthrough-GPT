@@ -33,19 +33,21 @@ cd path/to/your/projects
 git clone https://github.com/zjerath/Walkthrough-GPT.git
 ```
 
-3. Move into the cloned repo:
+3. Follow steps 1 and 3 from the deployment instructions above if not already completed.
+
+4. Move into the cloned repo:
 
 ```
 cd Walkthrough-GPT
 ```
 
-4. Install dependencies:
+5. Install dependencies:
 
 ```
 npm install
 ```
 
-5. Then:
+6. Then:
 
 ```
 npm run start
