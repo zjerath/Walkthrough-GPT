@@ -53,15 +53,7 @@ npm install
 npm run start
 ```
 
-Further scripts are provided below under Scripts.
-
-## Contact
-
-For any questions, please contact:
-
-Zain Jerath - zainjerath@gmail.com
-
-Chris Riesbeck - c-riesbeck@northwestern.edu.
+Further scripts are provided below.
 
 ## Scripts
 
@@ -75,3 +67,11 @@ Chris Riesbeck - c-riesbeck@northwestern.edu.
 | npm run serve    | Serves the production build from the `dist` folder. |
 | npm test         | Starts a Jest-like test loop                        |
 | npm run coverage | Runs the tests, displays code coverage results      |
+
+## Contact
+
+For any questions, please contact:
+
+Zain Jerath - zainjerath@gmail.com
+
+Chris Riesbeck - c-riesbeck@northwestern.edu.
