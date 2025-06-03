@@ -1,4 +1,5 @@
 # COPA
+![Uploading Screen Shot 2025-06-02 at 10.17.52 PM.png…]()
 
 Instructions for running the react app are below, however to deploy there are a few extra steps needed:
 1. Need to configure an OpenAI API key, any other LLM will require refactoring.
