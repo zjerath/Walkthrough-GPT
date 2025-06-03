@@ -17,8 +17,8 @@ Instructions for deployment are below:
     - To integrate the database, first create a new Firebase project and paste the corresponding config into src/firebase.js.
     - Once the project is created, navigate to the Realtime Database tab under the Build section and follow the instructions:
     - <img width="235" alt="Screen Shot 2025-06-02 at 10 36 41 PM" src="https://github.com/user-attachments/assets/795f19bd-363e-48f6-8194-c29f8fb336ef" />
-4. Once Integrated, chats and responses will be viewable in the Realtime Database tab. Corresponding code is available in src/App.jsx
-    - The same Firebase project and database can be linked with COPA's corresponding [conversation viewer](https://github.com/zjerath/Convoviewer]) if implemented as well
+4. Once Integrated, chats and responses will be viewable in the Realtime Database tab. Corresponding code is available in src/App.jsx.
+    - The same Firebase project and database can be linked with COPA's corresponding [conversation viewer](https://github.com/zjerath/Convoviewer]) if implemented as well.
 
 To run the app locally, the same api key integration must be done. Then run:
 
