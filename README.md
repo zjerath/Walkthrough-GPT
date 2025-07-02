@@ -1,4 +1,4 @@
-# COPA
+# COPA (Code Paraphraser)
 <img width="936" alt="Screen Shot 2025-06-02 at 10 19 16 PM" src="https://github.com/user-attachments/assets/574155eb-47cd-458c-bb4f-75c7b3784707" />
 
 ## Requirements
